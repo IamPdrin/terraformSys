@@ -390,8 +390,8 @@ resource "aws_db_subnet_group" "rds_subnet_group" {
 }
 
 resource "random_password" "rds_password" {
-  length  = 16
-  special = true
+  length           = 16
+  override_special = "!#$%&*()_+-=<>?{}[]"  # apenas caracteres permitidos pelo RDS
 }
 
 resource "aws_db_instance" "postgres1" {
