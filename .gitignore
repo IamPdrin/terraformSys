@@ -1,0 +1,29 @@
+# Pasta interna do Terraform (plugins, cache, providers)
+.terraform/
+
+# Estado da infraestrutura (NUNCA subir para o Git)
+terraform.tfstate
+terraform.tfstate.backup
+
+# Lockfile de provider (gera inconsistência entre máquinas)
+.terraform.lock.hcl
+
+# Arquivos sensíveis / variáveis privadas
+terraform.tfvars
+*.tfvars
+*.auto.tfvars
+
+# Arquivos ZIP (como lambdas ou pacotes enviados para S3)
+*.zip
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Configs locais
+*.swp
+*.bak
+
+# Sistema
+.DS_Store
+Thumbs.db
