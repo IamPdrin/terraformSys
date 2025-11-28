@@ -62,14 +62,16 @@ resource "aws_subnet" "public2" {
 
 # Private subnets (2 AZs)
 resource "aws_subnet" "private1" {
-  vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.2.0/24"
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = "10.0.2.0/24"
+  availability_zone = "us-east-1a"
   tags = { Name = "tf-private-subnet-1" }
 }
 
 resource "aws_subnet" "private2" {
-  vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.12.0/24"
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = "10.0.12.0/24"
+  availability_zone = "us-east-1b"
   tags = { Name = "tf-private-subnet-2" }
 }
 
