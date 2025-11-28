@@ -97,7 +97,7 @@ sysAWS/
    ```
 
 4. **Configurar Grafana:**
-   - Importar os dashboards JSON localizados em `grafana/jsonAPI/`
+   - Importar os dashboards JSON localizados em `grafana/`
    - Configurar data sources para CloudWatch da AWS
 
 ---
