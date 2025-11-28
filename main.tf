@@ -394,7 +394,7 @@ resource "random_password" "rds_password" {
   special = true
 }
 
-resource "aws_db_instance" "postgres" {
+resource "aws_db_instance" "postgres1" {
   identifier            = "meu-postgres"
   engine                = "postgres"
   engine_version        = "15.8"
@@ -436,7 +436,7 @@ output "s3_bucket_name" {
 
 output "rds_endpoint" {
   description = "Endpoint do RDS PostgreSQL"
-  value       = aws_db_instance.postgres.address
+  value       = aws_db_instance.postgres1.address
 }
 
 output "rds_password" {
